@@ -25,7 +25,11 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    raise params.inspect #print out params on error page
+    #raise params.inspect #print out params on error page
+    @article = Article.find(params[:id])
+    @article.update(title: params[:article][:title], params[:article][:description])
+    redirect_to article_path(@article)
+    
   end
 
 end
