@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    raise params.inspect
+    raise params.inspect #print out params on error page
   end
 
 end
